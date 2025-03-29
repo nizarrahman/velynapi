@@ -126,9 +126,9 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "http://schema.org",
             "@type": "WebSite",
-            "name": "VelynAPI",
+            "name": "NV Team Api",
             "url": "https://apivelyn.vercel.app",
-            "description": "VelynAPI is a free, simple REST API for everyone.",
+            "description": "NV Team Ap is a free, simple REST API for everyone.",
           }),
         }}
       />
