@@ -113,9 +113,9 @@ export default function Home() {
       <Head>
         <title>NV Team Ap Documentation</title>
         <meta name="title" content="VelynAPI - Documentation" />
-        <meta name="description" content="VelynAPI is a free, simple REST API for everyone. Enjoy using it without any cost!" />
-        <meta property="og:title" content="VelynAPI - Documentation" />
-        <meta property="og:description" content="VelynAPI is a free, simple REST API for everyone." />
+        <meta name="description" content="NV API is a free, simple REST API for everyone. Enjoy using it without any cost!" />
+        <meta property="og:title" content="NV Api - Documentation" />
+        <meta property="og:description" content="NV API is a free, simple REST API for everyone." />
         <meta property="og:type" content="website" />
       </Head>
 
