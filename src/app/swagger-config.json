@@ -1,14 +1,14 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "VelynApi",
-    "description": "Welcome everyone, welcome to VelynAPI document home page. You can retrieve API data only in VelynAPI and certainly without incurring any costs in data retrieval, and the results obtained are very simple and very clear to understand.",
+    "title": "NV Rest Api",
+    "description": "Welcome everyone, welcome to NV Rest Api document home page. You can retrieve API data only in NV Rest Api and certainly without incurring any costs in data retrieval, and the results obtained are very simple and very clear to understand.",
     "contact": {
-      "email": "https://wa.me/+62895342022385"
+      "email": "developer@nvteam.web.id"
     },
     "license": {
-      "name": "NextTime Information",
-      "url": "https://whatsapp.com/channel/0029VaKoIaj9cDDgB6N9u232"
+      "name": "Team Information",
+      "url": "https://nvteam.web.id"
     },
     "version": "1.0"
   },
