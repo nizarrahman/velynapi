@@ -1,0 +1,3570 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "NV Tean",
+    "description": "Welcome everyone, welcome to NV Tean document home page. You can retrieve API data only in NV Tean and certainly without incurring any costs in data retrieval, and the results obtained are very simple and very clear to understand.",
+    "contact": {
+      "email": "https://wa.me/+62895342022385"
+    },
+    "license": {
+      "name": "NextTime Information",
+      "url": "https://whatsapp.com/channel/0029VaKoIaj9cDDgB6N9u232"
+    },
+    "version": "1.0"
+  },
+  "paths": {
+    
+    "/api/stalk/repostalk": {
+      "get": {
+        "tags": ["Stalker"],
+        "description": "Ge",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+              }
+           }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+  "/api/stalk/githubstalk": {
+    "get": {
+      "tags": ["Stalker"],
+      "parameters": [
+        {
+          "name": "username",
+          "in": "query",
+          "schema": { "type": "string" },
+          "required": true,
+          "description": "Nama pengguna GitHub"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "username": { "type": "string" },
+                      "nickname": { "type": "string" },
+                      "bio": { "type": "string" },
+                      "id": { "type": "integer" },
+                      "nodeId": { "type": "string" },
+                      "profile_pic": { "type": "string", "format": "uri" },
+                      "url": { "type": "string", "format": "uri" },
+                      "type": { "type": "string" },
+                      "admin": { "type": "boolean" },
+                      "company": { "type": "string" },
+                      "blog": { "type": "string" },
+                      "location": { "type": "string" },
+                      "email": { "type": "string" },
+                      "public_repo": { "type": "integer" },
+                      "public_gists": { "type": "integer" },
+                      "followers": { "type": "integer" },
+                      "following": { "type": "integer" },
+                      "created_at": { "type": "string", "format": "date-time" },
+                      "updated_at": { "type": "string", "format": "date-time" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter tidak valid"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
+  "/api/stalk/FreeFireStalk": {
+  "get": {
+    "tags": ["Stalker"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "query",
+        "schema": { "type": "string" },
+        "required": true,
+        "description": "ID Free Fire pengguna"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" },
+                    "bio": { "type": "string" },
+                    "like": { "type": "integer" },
+                    "level": { "type": "integer" },
+                    "exp": { "type": "integer" },
+                    "region": { "type": "string" },
+                    "honorScore": { "type": "integer" },
+                    "brRank": { "type": "string" },
+                    "brRankPoint": { "type": "integer" },
+                    "csRankPoint": { "type": "integer" },
+                    "accountCreated": { "type": "string", "format": "date" },
+                    "lastLogin": { "type": "string", "format": "date-time" },
+                    "preferMode": { "type": "string" },
+                    "language": { "type": "string" },
+                    "booyahPassPremium": { "type": "boolean" },
+                    "booyahPassLevel": { "type": "integer" },
+                    "petInformation": {
+                      "type": "object",
+                      "properties": {
+                        "name": { "type": "string" },
+                        "level": { "type": "integer" },
+                        "exp": { "type": "integer" },
+                        "starMarked": { "type": "boolean" },
+                        "selected": { "type": "boolean" }
+                      }
+                    },
+                    "guild": { "type": "string" },
+                    "equippedItems": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": { "type": "string" },
+                          "img": { "type": "string", "format": "uri" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter ID tidak valid"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+}, 
+    "/api/tools/Carbonfyv1": {
+      "post": {
+        "tags": ["Tools"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "default": "hallo wirr"
+                  }
+                },
+                "required": ["text"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/tools/subfinder": {
+      "get": {
+        "tags": ["Tools"],
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/tools/ssweb": {
+      "get": {
+        "tags": ["Tools"],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uri"
+            },
+            "description": "URL dari halaman yang ingin di-screenshot"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Berhasil mengambil screenshot",
+            "content": {
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Parameter 'url' tidak diberikan",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Metode tidak diizinkan"
+          },
+          "500": {
+            "description": "Kesalahan internal server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tools/morse": {
+  "get": {
+    "tags": ["Tools"],
+    "parameters": [
+      {
+        "name": "input",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Teks atau kode Morse yang akan dikonversi"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "input": { "type": "string" },
+                "output": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'input' tidak boleh kosong"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+},
+  "/api/tools/remini": {
+    "get": {
+      "tags": ["Tools"],
+      "summary": "Meningkatkan kualitas gambar menggunakan AI Remini",
+      "parameters": [
+        {
+          "name": "url",
+          "in": "query",
+          "schema": {
+            "type": "string"
+          },
+          "required": true,
+          "description": "URL gambar yang akan ditingkatkan kualitasnya"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "input": { "type": "string" },
+                  "output": { "type": "string" }
+                }
+              }
+            }
+          }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'input' tidak boleh kosong"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+},
+"/api/tools/tulisbuku": {
+  "get": {
+    "tags": ["Tools"],
+    "summary": "Membuat gambar buku tulis dengan teks yang diberikan",
+    "parameters": [
+      {
+        "name": "prompt",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Teks yang akan ditulis di gambar buku"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Berhasil membuat gambar buku tulis",
+        "content": {
+          "image/jpeg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Parameter 'prompt' tidak diberikan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "405": {
+        "description": "Metode tidak diizinkan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Kesalahan internal server",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+"/api/tools/removebg": {
+  "get": {
+    "tags": ["Tools"],
+    "summary": "Menghapus latar belakang gambar menggunakan AI",
+    "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+  "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "URL gambar yang akan dihapus latar belakangnya"
+          },
+          {
+            "name": "apikey",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "API key yang diperlukan untuk akses"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "input": { "type": "string" },
+                    "output": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Parameter 'url' tidak boleh kosong"
+          },
+          "401": {
+            "description": "Unauthorized - API Key tidak valid atau tidak diberikan"
+          },
+          "403": {
+            "description": "Forbidden - API Key tidak memiliki akses"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+  },
+  "/api/tools/quotes": {
+  "get": {
+    "tags": ["Tools"],
+    "summary": "Get a random quote",
+    "description": "Fetches a random quote from quotes",
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean"
+                },
+                "creator": {
+                  "type": "string"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "quote": {
+                      "type": "string"
+                    },
+                    "author": {
+                      "type": "string"
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "405": {
+        "description": "Method Not Allowed"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+}, 
+  "/api/tools/puisi": {
+  "get": {
+    "tags": ["Tools"],
+    "summary": "Get a random puisi",
+    "description": "Fetches a random puisi from the website",
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean"
+                },
+                "creator": {
+                  "type": "string"
+                },
+                "data": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "405": {
+        "description": "Method Not Allowed"
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean"
+                },
+                "creator": {
+                  "type": "string"
+                },
+                "error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+  "/api/maker/brat": {
+  "get": {
+    "tags": ["Maker"],
+    "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+    "parameters": [
+      {
+        "name": "text",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Teks yang akan diubah menjadi brat image"
+      },
+      {
+        "name": "apikey",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "API key yang diperlukan untuk akses"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "text": { "type": "string" },
+                    "fontSize": { "type": "string" },
+                    "blurLevel": { "type": "string" },
+                    "image": { "type": "string", "format": "uri" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'text' wajib diisi"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "401": {
+        "description": "Unauthorized - API Key tidak valid atau tidak diberikan"
+      },
+      "403": {
+        "description": "Forbidden - API Key tidak memiliki akses"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+},
+    "/api/maker/ttp": {
+  "get": {
+    "tags": ["Maker"],
+    "summary": "Membuat teks menjadi gambar dengan efek transparan",
+    "parameters": [
+      {
+        "name": "text",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Teks yang akan diubah menjadi gambar"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success - Gambar berhasil dibuat",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": { "type": "string" },
+                      "image": { "type": "string", "format": "uri" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'text' wajib diisi",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized - API Key tidak valid atau tidak disertakan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error - Kesalahan pada server",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+      "/api/search/antaraNews": {
+      "get": {
+        "tags": ["News"],
+        "summary": "Mencari berita di Antara News berdasarkan kata kunci",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": { "type": "string" },
+            "required": true,
+            "description": "Kata kunci berita yang ingin dicari"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": { "type": "integer", "default": 1 },
+            "required": false,
+            "description": "Halaman hasil pencarian"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": { "type": "string" },
+                          "uploaded": { "type": "string" },
+                          "url": { "type": "string", "format": "uri" },
+                          "img": { "type": "string", "format": "uri" },
+                          "description": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Parameter 'q' tidak boleh kosong",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error - Terjadi kesalahan pada server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search/antaraDetail": {
+      "get": {
+        "tags": ["News"],
+        "summary": "Mendapatkan detail berita berdasarkan URL",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": { "type": "string", "format": "uri" },
+            "required": true,
+            "description": "URL lengkap berita Antara yang ingin diambil detailnya"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "title": { "type": "string" },
+                        "img": { "type": "string", "format": "uri" },
+                        "date": { "type": "string" },
+                        "readDuration": { "type": "string" },
+                        "tags": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "tag": { "type": "string" },
+                              "url": { "type": "string", "format": "uri" }
+                            }
+                          }
+                        },
+                        "content": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Parameter 'url' tidak boleh kosong",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error - Terjadi kesalahan pada server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search/antaraLatest": {
+      "get": {
+        "tags": ["News"],
+        "summary": "Mendapatkan berita terbaru dari Antara News",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": { "type": "string" },
+                          "uploaded": { "type": "string" },
+                          "url": { "type": "string", "format": "uri" },
+                          "img": { "type": "string", "format": "uri" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error - Terjadi kesalahan pada server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, 
+  "/api/search/pornsearch": {
+    "get": {
+      "tags": ["Search"],
+      "summary": "Mencari video di YouPorn",
+      "description": "Mengambil daftar video berdasarkan kata kunci pencarian dari YouPorn.",
+      "parameters": [
+        {
+          "name": "query",
+          "in": "query",
+          "schema": {
+            "type": "string"
+          },
+          "required": true,
+          "description": "Kata kunci untuk mencari video di YouPorn"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Berhasil mendapatkan hasil pencarian",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "title": { "type": "string" },
+                        "duration": { "type": "string" },
+                        "thumbnail": { "type": "string", "format": "uri" },
+                        "url": { "type": "string", "format": "uri" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter 'query' tidak boleh kosong",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "error": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "401": {
+          "description": "Unauthorized - API key atau akses tidak valid",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "error": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "500": {
+          "description": "Internal Server Error - Gagal mengambil data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "error": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, 
+    "/api/search/an1": {
+  "get": {
+    "tags": ["Search"],
+    "parameters": [
+      {
+        "name": "query",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Kata kunci untuk mencari aplikasi atau game di AN1"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": { "type": "string" },
+                      "dev": { "type": "string" },
+                      "rating": { "type": "string" },
+                      "thumb": { "type": "string", "format": "uri" },
+                      "link": { "type": "string", "format": "uri" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'query' tidak boleh kosong"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }      
+},
+  "/api/search/filmsearch": {
+    "get": {
+      "tags": ["Search"],
+      "parameters": [
+        {
+          "name": "query",
+          "in": "query",
+          "schema": {
+            "type": "string"
+          },
+          "required": true,
+          "description": "Judul film yang ingin dicari"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success - Data film ditemukan",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean", "example": true },
+                  "creator": { "type": "string", "example": "API Creator" },
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "title": { "type": "string", "example": "Inception" },
+                        "link": { "type": "string", "format": "uri", "example": "https://example.com/inception" },
+                        "image": { "type": "string", "format": "uri", "example": "https://example.com/inception.jpg" },
+                        "rating": { "type": "string", "example": "8.8/10" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter 'query' tidak boleh kosong",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean", "example": false },
+                  "creator": { "type": "string", "example": "API Creator" },
+                  "error": { "type": "string", "example": "Query parameter is required" }
+                }
+              }
+            }
+          }
+        },
+        "401": {
+          "description": "Unauthorized - API Key salah atau tidak disertakan",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean", "example": false },
+                  "creator": { "type": "string", "example": "API Creator" },
+                  "error": { "type": "string", "example": "Unauthorized - Invalid API Key" }
+                }
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Not Found - Film tidak ditemukan",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean", "example": false },
+                  "creator": { "type": "string", "example": "API Creator" },
+                  "error": { "type": "string", "example": "No results found" }
+                }
+              }
+            }
+          }
+        },
+        "500": {
+          "description": "Internal Server Error - Terjadi kesalahan pada server",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean", "example": false },
+                  "creator": { "type": "string", "example": "API Creator" },
+                  "error": { "type": "string", "example": "Internal Server Error" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+"/api/search/filmdetail": {
+  "get": {
+    "tags": ["Search"], 
+    "parameters": [
+      {
+        "name": "url",
+        "in": "query",
+        "schema": { "type": "string", "format": "uri" },
+        "required": true,
+        "description": "URL lengkap halaman film yang ingin diambil detailnya"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "title": { "type": "string" },
+                    "thumbnail": { "type": "string", "format": "uri" },
+                    "synopsis": { "type": "string" },
+                    "downloadLinks": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "quality": { "type": "string" },
+                          "downloadUrl": { "type": "string", "format": "uri" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'url' tidak boleh kosong",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error - Terjadi kesalahan pada server",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+"/api/search/imdb": {
+  "get": {
+    "tags": ["Search"],
+    "parameters": [
+      {
+        "name": "query",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Judul film yang ingin dicari"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "title": { "type": "string" },
+                    "year": { "type": "string" },
+                    "rated": { "type": "string" },
+                    "released": { "type": "string" },
+                    "runtime": { "type": "string" },
+                    "genre": { "type": "string" },
+                    "director": { "type": "string" },
+                    "writer": { "type": "string" },
+                    "actors": { "type": "string" },
+                    "plot": { "type": "string" },
+                    "language": { "type": "string" },
+                    "country": { "type": "string" },
+                    "awards": { "type": "string" },
+                    "poster": { "type": "string", "format": "uri" },
+                    "ratings": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "source": { "type": "string" },
+                          "value": { "type": "string" }
+                        }
+                      }
+                    },
+                    "imdbRating": { "type": "string" },
+                    "imdbVotes": { "type": "string" },
+                    "imdbID": { "type": "string" },
+                    "type": { "type": "string" },
+                    "boxOffice": { "type": "string" },
+                    "production": { "type": "string" },
+                    "website": { "type": "string", "format": "uri" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'query' tidak boleh kosong",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized - API Key salah atau tidak disertakan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Not Found - Film tidak ditemukan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error - Terjadi kesalahan pada server",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},                
+"/api/search/lyric": {
+  "get": {
+    "tags": ["Search"],
+    "parameters": [
+      {
+        "name": "q",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Kata kunci untuk mencari lirik lagu"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "songId": { "type": "string" },
+                      "artist": { "type": "string" },
+                      "songTitle": { "type": "string" },
+                      "songLyricsUrl": { "type": "string", "format": "uri" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'q' tidak boleh kosong",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+"/api/search/goodDreamer": {
+    "get": {
+      "tags": ["Search"], 
+      "parameters": [
+        {
+          "name": "query",
+          "in": "query",
+          "schema": {
+            "type": "string"
+          },
+          "required": true,
+          "description": "Kata kunci untuk mencari novel berdasarkan judul atau penulis"
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "default": 10
+          },
+          "required": false,
+          "description": "Jumlah hasil maksimal yang ingin ditampilkan (default: 10)"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "title": { "type": "string" },
+                        "author": { "type": "string" },
+                        "rating": { "type": "number" },
+                        "thumbnail": { "type": "string", "format": "uri" },
+                        "link": { "type": "string", "format": "uri" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter 'query' tidak boleh kosong",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "error": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "401": {
+          "description": "Unauthorized - API Key salah atau tidak disertakan",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "error": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "500": {
+          "description": "Internal Server Error - Terjadi kesalahan pada server",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "error": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },          
+  "/api/search/caribuku": {
+    "get": {
+      "tags": ["Search"],
+      "parameters": [
+        {
+          "name": "query",
+          "in": "query",
+          "schema": {
+            "type": "string"
+          },
+          "required": true,
+          "description": "Kata kunci untuk mencari buku di Goodreads"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "title": { "type": "string" },
+                        "link": { "type": "string", "format": "uri" },
+                        "rating": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter 'query' tidak boleh kosong"
+        },
+        "401": {
+          "description": "Unauthorized"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
+ "/api/search/yahooimg": {
+  "get": {
+    "tags": ["Search"],
+    "parameters": [
+      {
+        "name": "q",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Kata kunci untuk mencari gambar di Yahoo Image Search"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Data gambar berhasil ditemukan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": { "type": "string" },
+                      "size": { "type": "string" },
+                      "width": { "type": "integer" },
+                      "height": { "type": "integer" },
+                      "url": { "type": "string", "format": "uri" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Parameter query tidak boleh kosong",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Akses tidak diizinkan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Kesalahan pada server",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
+  "/api/search/jadwalSholat": {
+  "get": {
+    "tags": ["Search"],
+    "parameters": [
+      {
+        "name": "query",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Nama kota untuk mencari jadwal sholat"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "imsak": { "type": "string", "description": "Waktu imsak" },
+                    "subuh": { "type": "string", "description": "Waktu subuh" },
+                    "dzuhur": { "type": "string", "description": "Waktu dzuhur" },
+                    "ashar": { "type": "string", "description": "Waktu ashar" },
+                    "maghrib": { "type": "string", "description": "Waktu maghrib" },
+                    "isya": { "type": "string", "description": "Waktu isya" },
+                    "all": {
+                      "type": "array",
+                      "description": "Jadwal sholat lengkap untuk beberapa hari",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "tanggal": { "type": "string", "description": "Tanggal jadwal" },
+                          "jadwal": {
+                            "type": "object",
+                            "properties": {
+                              "imsak": { "type": "string" },
+                              "subuh": { "type": "string" },
+                              "dzuhur": { "type": "string" },
+                              "ashar": { "type": "string" },
+                              "maghrib": { "type": "string" },
+                              "isya": { "type": "string" }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'query' tidak valid atau kosong"
+      },
+      "404": {
+        "description": "Not Found - Data jadwal sholat tidak ditemukan untuk kota tersebut"
+      },
+      "500": {
+        "description": "Internal Server Error - Kesalahan pada server"
+      }
+    }
+  }
+}, 
+  "/api/search/cineplex": {
+    "get": {
+      "tags": ["Search"],
+      "parameters": [
+        {
+          "name": "type",
+          "in": "query",
+          "schema": {
+            "type": "string",
+            "enum": ["release", "detail"]
+          },
+          "required": true,
+          "description": "Tipe pencarian: 'release' untuk daftar film, 'detail' untuk detail film"
+        },
+        {
+          "name": "url",
+          "in": "query",
+          "schema": {
+            "type": "string",
+            "format": "uri"
+          },
+          "required": false,
+          "description": "URL film untuk mendapatkan detailnya (wajib jika type=detail)"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": { "type": "string" },
+                        "title": { "type": "string" },
+                        "image": { "type": "string", "format": "uri" },
+                        "type": { "type": "string" },
+                        "rating": { "type": "string" },
+                        "advanceTicketSales": { "type": "string" },
+                        "detailsLink": { "type": "string", "format": "uri" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter tidak valid"
+        },
+        "401": {
+          "description": "Unauthorized"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
+    "/api/ai/openai": {
+      "get": {
+        "tags": ["Chat AI"],
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/ai/mistralNemo": {
+      "get": {
+        "tags": ["Chat AI"],
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+  "/api/ai/magicHourAI": {
+  "get": {
+    "tags": ["AI Generator"],
+    "parameters": [
+      {
+        "name": "prompt",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Deskripsi gambar yang ingin dihasilkan oleh AI"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success - URL gambar berhasil dihasilkan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "image_url": { "type": "string", "format": "uri" }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'prompt' tidak boleh kosong",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "405": {
+        "description": "Method Not Allowed - Hanya metode GET yang diizinkan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error - Terjadi kesalahan saat memproses permintaan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+  "/api/ai/logo": {
+    "get": {
+      "tags": ["AI Generator"],
+      "summary": "Generate AI Logo",
+      "security": [
+        {
+          "ApiKeyAuth": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "prompt",
+          "in": "query",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "description": "Deskripsi gambar yang ingin dihasilkan oleh AI (format: 'title | slogan | idea')"
+        },
+        {
+          "name": "apikey",
+          "in": "query",
+          "schema": {
+            "type": "string"
+          },
+          "required": true,
+          "description": "API key yang diperlukan untuk akses (bisa juga dikirim melalui header `X-API-KEY`)"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success - Mengembalikan gambar logo dalam format PNG/JPG",
+          "content": {
+            "image/png": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/jpeg": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter 'prompt' atau 'apikey' tidak boleh kosong"
+        },
+        "401": {
+          "description": "Unauthorized - API Key tidak valid atau tidak diberikan"
+        },
+        "403": {
+          "description": "Forbidden - API Key tidak memiliki akses"
+        },
+        "500": {
+          "description": "Internal Server Error - Terjadi kesalahan pada server"
+        }
+      }
+    }
+  }, 
+"/api/ai/magicStudio": {
+  "get": {
+    "tags": ["AI Generator"],
+     "security": [
+     {
+     "ApiKeyAuth": []
+     }
+     ],
+    "parameters": [
+      {
+        "name": "prompt",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Deskripsi gambar yang ingin dihasilkan oleh AI"
+      },
+      {
+            "name": "apikey",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "API key yang diperlukan untuk akses"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "input": { "type": "string" },
+                    "output": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Parameter 'url' tidak boleh kosong"
+          },
+          "401": {
+            "description": "Unauthorized - API Key tidak valid atau tidak diberikan"
+          },
+          "403": {
+            "description": "Forbidden - API Key tidak memiliki akses"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+  },
+ "/api/ai/hero": {
+  "get": {
+    "tags": ["AI Generator"],
+    "parameters": [
+      {
+        "name": "prompt",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "image/jpeg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        }
+      },
+      "400": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},   
+"/api/ai/text2img": {
+  "get": {
+    "tags": ["AI Generator"],
+    "summary": "Menghasilkan gambar dari teks menggunakan AI",
+    "description": "Endpoint ini menghasilkan gambar berdasarkan deskripsi teks yang diberikan.",
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "parameters": [
+      {
+        "name": "prompt",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Deskripsi gambar yang ingin dihasilkan oleh AI"
+      },
+      {
+        "name": "apikey",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "API key yang diperlukan untuk mengakses endpoint ini"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success - Gambar berhasil dihasilkan",
+        "content": {
+          "image/jpeg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'prompt' tidak boleh kosong",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized - API Key tidak valid atau tidak diberikan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden - API Key tidak memiliki akses",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+     "/api/ai/simi": {
+      "get": {
+        "tags": ["Chat AI"],
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },  
+  "/api/ai/saanviAI": {
+    "get": {
+      "tags": ["Chat AI"],
+      "summary": "Dapatkan respons AI dari input teks",
+      "parameters": [
+        {
+          "name": "text",
+          "in": "query",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "Teks yang dikirim ke AI"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Berhasil",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "result": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Kesalahan input",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "error": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "500": {
+          "description": "Kesalahan server",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "error": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, 
+     "/api/ai/gemini": {
+      "get": {
+        "tags": ["Chat AI"],
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+  "/api/ai/doppleAI": {
+  "get": {
+    "tags": ["Chat AI"],
+    "parameters": [
+      {
+        "name": "prompt",
+        "in": "query",
+        "required": true,
+        "schema": { "type": "string" }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "405": {
+        "description": "Method Not Allowed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
+  "/api/ai/LilyAI": {
+  "get": {
+    "tags": ["Chat AI"],
+    "parameters": [
+      {
+        "name": "prompt",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "response": { "type": "string" },
+                    "bot_id": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+}, 
+    "/api/ai/deepseek-coder-67b": {
+      "get": {
+        "tags": ["Chat AI"],
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+     "/api/ai/deepseek-r1": {
+      "get": {
+        "tags": ["Chat AI"],
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/instagram": {
+      "get": {
+        "tags": ["Downloader"],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/facebookdl": {
+  "get": {
+    "tags": ["Downloader"],
+    "parameters": [
+      {
+        "name": "url",
+        "in": "query",
+        "description": "URL video Facebook yang ingin diunduh",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Berhasil mendapatkan data video",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "video_url": { "type": "string" },
+                    "title": { "type": "string" },
+                    "thumbnail": { "type": "string" },
+                    "duration": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Kesalahan validasi, URL tidak valid atau tidak diberikan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Terjadi kesalahan di server atau gagal mengambil video",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "405": {
+        "description": "Metode HTTP tidak diizinkan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
+  "/api/search/tiktoksearch": {
+  "get": {
+    "tags": ["Search"],
+    "parameters": [
+      {
+        "name": "query",
+        "in": "query",
+        "description": "Keyword to search for TikTok videos",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Successful response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": { "type": "string" },
+                      "cover": { "type": "string", "format": "uri" },
+                      "origin_cover": { "type": "string", "format": "uri" },
+                      "link": { "type": "string", "format": "uri" },
+                      "no_watermark": { "type": "string", "format": "uri" },
+                      "watermark": { "type": "string", "format": "uri" },
+                      "music": {
+                        "type": "object",
+                        "properties": {
+                          "id": { "type": "string" },
+                          "title": { "type": "string" },
+                          "author": { "type": "string" },
+                          "play_url": { "type": "string", "format": "uri" }
+                        }
+                      },
+                      "views": { "type": "integer" },
+                      "likes": { "type": "integer" },
+                      "comments": { "type": "integer" },
+                      "shares": { "type": "integer" },
+                      "downloads": { "type": "integer" },
+                      "saves": { "type": "integer" },
+                      "created_at": { "type": "string", "format": "date-time" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Missing query parameter",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Not Found - No videos found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+    "/api/search/wikped": {
+      "get": {
+        "tags": ["Search"],
+          "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/douyin": {
+  "get": {
+    "tags": ["Downloader"],
+    "parameters": [
+      {
+        "name": "url",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "title": { "type": "string" },
+                    "thumbnail": { "type": "string" },
+                    "downloadLinks": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "format": { "type": "string" },
+                          "url": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+ "/api/downloader/teraboxdl": {
+  "get": {
+    "tags": ["Downloader"],
+    "parameters": [
+      {
+        "name": "url",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "format": "uri"
+        },
+        "required": true,
+        "description": "URL video Terabox yang akan didownload"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "string" },
+                    "video_url": { "type": "string", "format": "uri" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - URL tidak valid atau Video tidak ditemukan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+    "/api/downloader/snackVideo": {
+      "get": {
+        "tags": ["Downloader"],
+          "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+  "/api/downloader/soundCloud": {
+    "get": {
+    "tags": ["Downloader"],
+    "summary": "Download audio from SoundCloud",
+    "parameters": [
+      {
+        "name": "url",
+        "in": "query",
+        "required": true,
+        "description": "SoundCloud track URL",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success - Returns audio download link, title, and artwork",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "title": { "type": "string" },
+                    "artwork": { "type": "string" },
+                    "audio": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Invalid or missing URL",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Not Found - Audio not found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+    "/api/downloader/capcut": {
+      "get": {
+        "tags": ["Downloader"],
+        "summary": "Mendownload link url dari capcut",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "URL video capcut yang akan diunduh"
+          }, 
+          {
+            "name": "apikey",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "API key yang diperlukan untuk akses"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+         "400": {
+            "description": "Bad Request - Parameter 'url' tidak boleh kosong"
+          },
+          "401": {
+            "description": "Unauthorized - API Key tidak valid atau tidak diberikan"
+          },
+          "403": {
+            "description": "Forbidden - API Key tidak memiliki akses"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/downloader/spotifydl": {
+      "get": {
+        "tags": ["Downloader"],
+         "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/mediafire": {
+      "get": {
+        "tags": ["Downloader"],
+        "summary": "Mendownload link url dari mediafire",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "URL MediaFire yang akan diunduh"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+         "400": {
+            "description": "Bad Request - Parameter 'url' tidak boleh kosong"
+          },
+          "401": {
+            "description": "Unauthorized - API Key tidak valid atau tidak diberikan"
+          },
+          "403": {
+            "description": "Forbidden - API Key tidak memiliki akses"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/downloader/ytmp3": {
+      "get": {
+        "tags": ["Downloader"],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "URL video YouTube yang akan diunduh sebagai MP3"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+"properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "input": { "type": "string" },
+                    "output": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Parameter 'url' tidak boleh kosong"
+          },
+          "401": {
+            "description": "Unauthorized - API Key tidak valid atau tidak diberikan"
+          },
+          "403": {
+            "description": "Forbidden - API Key tidak memiliki akses"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+  },
+"/api/downloader/ytmp4v2": {
+  "get": {
+    "tags": ["Downloader"],
+    "parameters": [
+      {
+        "name": "url",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "format": "uri"
+        },
+        "required": true,
+        "description": "URL video YouTube yang akan dikonversi menjadi MP3."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Berhasil mendapatkan link unduhan MP3.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "videoId": { "type": "string" },
+                    "title": { "type": "string" },
+                    "thumbnail": { "type": "string" },
+                    "duration": { "type": "string" },
+                    "audioMp3": { "type": "string" },
+                    "uploaded": { "type": "string" },
+                    "author": {
+                      "type": "object",
+                      "properties": {
+                        "name": { "type": "string" },
+                        "url": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'url' tidak boleh kosong atau tidak valid.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized - API Key tidak valid atau tidak diberikan.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden - API Key tidak memiliki akses ke layanan ini.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error - Kesalahan pada server.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
+    "/api/downloader/ytmp4": {
+      "get": {
+        "tags": ["Downloader"],
+          "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/krakenfiles": {
+      "get": {
+        "tags": ["Downloader"],
+          "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/twitter": {
+      "get": {
+        "tags": ["Downloader"],
+        "summary": "Mendownload video dari Twitter dan X",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "URL video Twitter dan X yang akan diunduh"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    
+    "/api/downloader/tiktok": {
+      "get": {
+        "tags": ["Downloader"],
+        "summary": "Mendownload video dari TikTok",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "URL video TikTok yang akan diunduh"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+"/api/stats": {
+  "get": {
+    "tags": ["Owner"], 
+    "description": "API Request stats", 
+    "responses": {
+      "200": {
+         "description": "Succes"
+      }, 
+      "401": {
+         "description": "Unauthorized"
+      }
+    }
+  }
+}, 
+"/api/owner/addapikey": {
+  "get": {
+    "tags": ["Owner"],
+    "summary": "Menambahkan API key baru",
+    "parameters": [
+      {
+        "name": "newApiKey",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "API key baru yang akan ditambahkan"
+      },
+      {
+        "name": "expiresInDays",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Jumlah hari sebelum API key kedaluwarsa (gunakan 'unlimited' jika ingin tanpa batas)"
+      },
+      {
+        "name": "apikeyown",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "API key yang digunakan untuk otentikasi"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "API key berhasil ditambahkan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "message": { "type": "string" },
+                "apiKey": { "type": "string" },
+                "createdAt": { "type": "string", "format": "date-time" },
+                "expiresAt": { "type": "string", "format": "date-time" },
+                "timeLeft": { "type": "string" },
+                "expiresInDays": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Kesalahan dalam permintaan (contoh: API key sudah ada atau parameter tidak valid)"
+      },
+      "401": {
+        "description": "Unauthorized - API key tidak valid"
+      },
+      "405": {
+        "description": "Method Not Allowed"
+      },
+      "500": {
+        "description": "Terjadi kesalahan internal pada server"
+      }
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ]
+  }
+},
+"components": {
+  "securitySchemes": {
+    "ApiKeyAuth": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "apikeyown",
+      "description": "Masukkan API key Anda"
+    }
+  }
+ }
+}
+}

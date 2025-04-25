@@ -1,0 +1,131 @@
+/* Styling CSS */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  border-radius: 12px;
+}
+
+.textContainer {
+  text-align: center;
+  max-width: 800px;
+}
+
+.subtitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #b506f5;
+}
+
+.desc {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.pricingBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pricingBox {
+  background: #3c0e7b;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pricingBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.planTitle {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 5px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.features li {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.icon {
+  color: #007bff;
+}
+
+.button {
+  background: #0038de;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #3c0e7b;
+}
+
+.popular {
+  background: #3c0e7b;
+  color: #ffffff;
+}
+
+.popular .planTitle {
+  border-bottom: 2px solid #ffffff;
+}
+
+.popular .price,
+.popular .icon {
+  color: #007bff;
+}
+
+.popular .button {
+  background: #0038de;
+  color: #fff;
+}
+
+.popular .button:hover {
+  background: #3c0e7b;
+}
+
+@media (max-width: 768px) {
+  .pricingBoxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
