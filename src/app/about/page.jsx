@@ -16,7 +16,7 @@ const AboutPage = () => {
         <h2 className={styles.subtitle}>About NV Team Api</h2>
         <p className={styles.desc}>
          Rest Api NV Team adalah solusi terbaik untuk anda yang mencari api versi gratisan,
-         dan gunakan lah api velyn karena endpoint api yang disediakan itu sangatlah cepat dalam proses pengambilan data sesuai requestan anda yang dibutuhkan
+         dan gunakan lah api Team karena endpoint api yang disediakan itu sangatlah cepat dalam proses pengambilan data sesuai requestan anda yang dibutuhkan
          dan juga tentunya tidak memakai limit ataupun key.
          disini menyediakan khusus pengguna gratisan
         </p>
